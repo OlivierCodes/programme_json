@@ -29,16 +29,12 @@ namespace programme_json
         }
 	}
 
-
-
 	internal class Program
 	{
 		static void Main(string[] args)
 		{ /*
 			var personne1 = new Personne() { Nom ="Toto", Age=24, Majeur=false };  
-			
 			personne1.Afficher();
-
 			// Sérialisation
 			//*Personne
 			string json = JsonConvert.SerializeObject(personne1);
@@ -51,7 +47,6 @@ namespace programme_json
 			
 			var Personnes = new List<Personne>()
 			{
-
 				new Personne(){nom="Olivier", age=36, majeur=true},
 				new Personne(){nom="Jean", age=18, majeur=true},
 				new Personne(){nom="Alain", age=17, majeur=false},
@@ -63,10 +58,7 @@ namespace programme_json
 
 			File.WriteAllText("Personnes.txt", json);
 			*/
-			
 
-			
-			
 			string json = File.ReadAllText("Personnes.txt");
 			var personnes = JsonConvert.DeserializeObject<List<Personne>>(json);
 
@@ -74,7 +66,6 @@ namespace programme_json
 			{
 				personne.Afficher();
 			}
-			
         }
 	}
 }
